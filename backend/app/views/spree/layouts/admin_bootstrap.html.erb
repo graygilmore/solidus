@@ -11,6 +11,7 @@
       <%= render "spree/admin/shared/bootstrap/flashes" %>
       <%= render "spree/admin/shared/bootstrap/loader" %>
 
+      <%= yield :tabs %>
       <div class="main-content-wrapper <%= "has-sidebar" if content_for?(:sidebar) %>">
         <div class="main-content" role="main">
           <%= render "spree/admin/shared/table_filter" %>

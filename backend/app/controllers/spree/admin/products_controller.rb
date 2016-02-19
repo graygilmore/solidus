@@ -12,6 +12,10 @@ module Spree
         redirect_to action: :edit
       end
 
+      def edit
+        render layout: "spree/layouts/admin_bootstrap"
+      end
+
       def index
         session[:return_to] = request.url
         respond_with(@collection)
