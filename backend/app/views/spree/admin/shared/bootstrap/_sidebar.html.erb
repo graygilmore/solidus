@@ -1,0 +1,9 @@
+<% if content_for?(:sidebar) %>
+  <aside class="content-sidebar">
+    <% if content_for?(:sidebar_title) %>
+      <h3><%= yield :sidebar_title %></h3>
+    <% end %>
+
+    <%= yield :sidebar %>
+  </aside>
+<% end %>

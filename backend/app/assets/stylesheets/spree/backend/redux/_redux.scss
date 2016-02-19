@@ -1,0 +1,34 @@
+.main-header {
+  @include display(flex);
+  @include align-items(center);
+  padding: 15px;
+  background-color: very-light($color-3, 4);
+  border-bottom: 1px solid $color-border;
+
+  h1 {
+    @include flex(1);
+    font-size: 20px;
+  }
+}
+
+.site-wrapper {
+  margin-left: $width-sidebar;
+}
+
+.main-content-wrapper {
+  @include display(flex);
+  @include padding(null $grid-gutter-width);
+}
+
+.main-content {
+  margin-left: 0; // override legacy code
+
+  .has-sidebar & {
+    @include make-col-span(8);
+  }
+}
+
+.content-sidebar {
+  @include make-col-span(4);
+  padding-left: $grid-gutter-width;
+}

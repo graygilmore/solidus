@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>">
+  <head data-hook="admin_inside_head">
+    <%= render "spree/admin/shared/head" %>
+  </head>
+  <body class="admin">
+    <%= render "spree/admin/shared/navigation" %>
+
+    <div class="site-wrapper">
+      <%= render "spree/admin/shared/bootstrap/header" %>
+      <%= render "spree/admin/shared/bootstrap/flashes" %>
+      <%= render "spree/admin/shared/bootstrap/loader" %>
+
+      <div class="main-content-wrapper <%= "has-sidebar" if content_for?(:sidebar) %>">
+        <div class="main-content" role="main">
+          <%= render "spree/admin/shared/table_filter" %>
+          <%= yield %>
+        </div>
+        <%= render "spree/admin/shared/bootstrap/sidebar" %>
+      </div>
+    </div>
+  </body>
+</html>
