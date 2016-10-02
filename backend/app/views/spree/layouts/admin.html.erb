@@ -27,7 +27,7 @@
           <div class="row">
             <div class="<%= 'with-sidebar ' if content_for?(:sidebar) %>" id="content" data-hook>
               <% if content_for?(:tabs) %>
-                <div class="sixteen columns">
+                <div class="tabs-wrapper sixteen columns">
                   <%= yield :tabs %>
                 </div>
               <% end %>

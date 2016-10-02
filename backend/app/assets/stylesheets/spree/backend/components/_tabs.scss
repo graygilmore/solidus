@@ -1,3 +1,7 @@
+.tabs-wrapper {
+  overflow-x: hidden;
+}
+
 .tabs {
   @include display(flex);
   margin: 1em 0;
